@@ -6,7 +6,7 @@ A lightweight, offline-first browser Pomodoro timer with task tracking, XP-based
 
 ## 🚀 Live Demo
 
-👉 https://<your-username>.github.io/pomodoro-timer/
+👉 (https://anoushkanag.github.io/Pomodoro_Timer/)
 
 ---
 
