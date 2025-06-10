@@ -1,0 +1,104 @@
+/* styles.css */
+:root {
+  --bg-color: #1e1e28;
+  --text-color: #fefefe;
+  --accent: #ff4d6d;
+  --muted: #999999;
+  --font: 'Inter', 'Segoe UI', sans-serif;
+}
+
+html[data-theme="light"] {
+  --bg-color: #fefefe;
+  --text-color: #111111;
+  --accent: #d6336c;
+  --muted: #777777;
+}
+
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex; justify-content: center; align-items: center;
+  min-height: 100vh; padding: 2rem;
+}
+.container {
+  width: 100%; max-width: 600px; padding: 2rem;
+}
+
+/* Header */
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 2rem;
+}
+.title { font-size: 1.5rem; color: var(--accent); }
+.theme-toggle {
+  background: none; border: 1px solid var(--muted);
+  color: var(--text-color); padding: .4rem 1rem;
+  border-radius: 6px; cursor: pointer; font-size: .85rem;
+}
+
+/* Timer Section */
+.timer-section { text-align: center; margin-bottom: 2rem; }
+.mode { font-size: 1rem; color: var(--muted); margin-bottom: .3rem; }
+.timer-display { font-size: 5rem; font-weight: bold; margin: 1rem 0; }
+.controls .btn {
+  background: var(--accent); color: #fff;
+  padding: .5rem 1.2rem; margin: .4rem;
+  border: none; border-radius: 6px; font-weight: 600; cursor: pointer;
+}
+.cycle-info {
+  margin-top: 1rem; font-size: .85rem; color: var(--muted);
+}
+
+/* Task Section */
+.tasks-section { margin: 2rem 0; }
+.tasks-section .section-title { font-size: 1.2rem; margin-bottom: .5rem; }
+.task-form { display: flex; gap: .5rem; }
+.task-input {
+  flex: 1; padding: .6rem; border-radius: 6px;
+  background: var(--bg-color); border: 1px solid var(--muted);
+  color: var(--text-color);
+}
+.task-form .btn {
+  padding: .6rem 1rem; background: var(--accent);
+  border: none; border-radius: 6px; color: #fff; cursor: pointer;
+}
+.task-list { list-style: none; margin-top: 1rem; }
+.task-list li {
+  padding: .5rem .75rem; background: var(--bg-color);
+  border-left: 4px solid var(--accent); border-radius: 6px;
+  margin-bottom: .5rem; display: flex; justify-content: space-between; align-items: center;
+}
+.task-list li button {
+  background: none; border: none; color: var(--accent);
+  cursor: pointer; font-size: 1rem;
+}
+/* Reset Tasks Button */
+.reset-tasks-btn {
+  margin-top: .5rem; background: #444; color: #fff;
+  padding: .5rem 1rem; border: none; border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Gamification Section */
+.gamification-section { margin-top: 2rem; }
+.gamification-section .section-title { margin-bottom: .3rem; }
+.quote {
+  margin-top: 1rem; font-style: italic; font-size: .9rem;
+  color: var(--muted);
+}
+
+/* Graph Section */
+.graph-section { margin-top: 2rem; text-align: center; }
+.graph-section canvas {
+  max-width: 100%; border: 1px solid var(--muted); border-radius: 6px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem; text-align: center; font-size: .8rem; color: var(--muted);
+}

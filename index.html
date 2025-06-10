@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- Chart.js CDN for session graphs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Pomodoro Timer</h1>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">Toggle Theme</button>
+    </header>
+
+    <main class="main">
+      <!-- Timer Section -->
+      <section class="timer-section">
+        <div id="mode" class="mode">Pomodoro</div>
+        <div id="timer" class="timer-display">25:00</div>
+        <div class="controls">
+          <button id="start-btn" class="btn">Start</button>
+          <button id="pause-btn" class="btn">Pause</button>
+          <button id="reset-btn" class="btn">Reset</button>
+        </div>
+        <div id="cycle-info" class="cycle-info">Cycle: 1 of 4</div>
+        <audio id="alert-sound" src="alert.mp3" preload="auto"></audio>
+      </section>
+
+      <!-- Tasks Section -->
+      <section class="tasks-section">
+        <h2 class="section-title">Tasks</h2>
+        <form id="task-form" class="task-form">
+          <input type="text" id="task-input" class="task-input" placeholder="What are you working on?" />
+          <button type="submit" class="btn add-task-btn">Add</button>
+        </form>
+        <ul id="task-list" class="task-list"></ul>
+        <!-- Reset Tasks Button -->
+        <button id="reset-tasks-btn" class="btn reset-tasks-btn">Reset All Tasks</button>
+      </section>
+
+      <!-- Gamification Section -->
+      <section class="gamification-section">
+        <h2 class="section-title">Progress</h2>
+        <p>XP: <span id="xp">0</span></p>
+        <p>Level: <span id="level">1</span></p>
+        <blockquote id="quote" class="quote">"Stay focused, stay strong."</blockquote>
+      </section>
+
+      <!-- Session Graph Section -->
+      <section class="graph-section">
+        <h2 class="section-title">Session History</h2>
+        <canvas id="session-graph" width="400" height="200"></canvas>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Sessions saved locally</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
