@@ -32,7 +32,7 @@ A lightweight, offline-first browser Pomodoro timer with task tracking, XP-based
 
 ---
 
-## 🛠️ Installation & Usage
+## 🛠️ Installation & Usage Access
 
 1. **Clone the repo**  
    ```bash
